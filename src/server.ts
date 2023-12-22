@@ -1,5 +1,6 @@
 import fastify, { FastifyReply, FastifyRequest } from 'fastify'
 import { knex } from './database'
+import { env } from './env'
 
 const app = fastify()
 
@@ -8,8 +9,10 @@ app.get('/hello', async (request: FastifyRequest, reply: FastifyReply) => {
   return tables
 })
 
+const port = env.APP_PORT
+
 app
   .listen({
-    port: 3333,
+    port,
   })
-  .then(() => console.log('HTTP Server Running!'))
+  .then(() => console.log(`HTTP Server Running on http://localhost:${port}`))
