@@ -1,5 +1,4 @@
-// eslint-disable-next-line
-import { Knex } from 'knex'
+import 'knex'
 
 declare module 'knex/types/tables' {
   interface Tables {
@@ -8,8 +7,8 @@ declare module 'knex/types/tables' {
       session_id?: string
       title: string
       amount: number
-      created_at: Date
-      updated_at: Date
+      created_at: string
+      updated_at: string
     }
   }
 }
