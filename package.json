@@ -1,6 +1,6 @@
 {
   "name": "api-rest-fastify",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@fastify/cookie": "^9.2.0",
     "dotenv": "^16.3.1",
     "fastify": "^4.25.1",
     "knex": "^3.1.0",
